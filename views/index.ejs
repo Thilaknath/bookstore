@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Books</title>      
+        <style>
+            h2 {
+                color: black;
+                text-align: center;
+            }
+                        
+            table, td, th {                 
+                border-spacing: 0;
+                border-collapse: collapse;
+                padding: 10px;                 
+                text-align: center;
+             }
+
+             td, th, tr {
+                border: 2px solid black;
+             }
+        </style>  
+    </head>
+    <body>
+        <h2>Book Inventory System</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>BookName</th>
+                    <th>Description</th>
+                    <th>Total</th>
+                    <th>Available</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let book of books){ %>
+                    <tr>
+                        <td > <%= book.title %> </td>
+                        <td > <%= book.description %> </td>
+                        <td > <%= book.totalQuantity %> </td>
+                        <td > <%= book.availableQuantity %> </td>
+                    </tr>
+                <% } %>
+            </tbody>
+          </table>
+    </body>
+</html>
